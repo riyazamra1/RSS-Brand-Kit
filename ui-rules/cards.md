@@ -8,3 +8,5 @@ Default:
 - Minimum subtle elevation
 - Clear icon/title/content hierarchy
 - No excessive borders or shadows
+- Animated entrance and meaningful state transitions by default
+- Keep glassmorphism reserved for navigation/drawer surfaces unless a project explicitly requests it elsewhere
