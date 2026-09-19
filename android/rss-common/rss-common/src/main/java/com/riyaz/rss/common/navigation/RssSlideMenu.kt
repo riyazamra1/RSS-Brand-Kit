@@ -10,8 +10,8 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -36,6 +36,7 @@ fun RssSlideMenu(
     userEmail: String?,
     items: List<RssMenuItem>,
     logo: Painter? = null,
+    companyLogo: Painter? = null,
     modifier: Modifier = Modifier
 ) {
     val shape = RoundedCornerShape(28.dp)
@@ -61,6 +62,7 @@ fun RssSlideMenu(
     ) {
         Column(
             modifier = Modifier
+                .fillMaxHeight()
                 .fillMaxWidth()
                 .padding(vertical = 18.dp, horizontal = 10.dp)
         ) {
@@ -134,6 +136,29 @@ fun RssSlideMenu(
             }
 
             Spacer(Modifier.weight(1f))
+
+            if (companyLogo != null) {
+                HorizontalDivider(Modifier.padding(vertical = 10.dp))
+                AnimatedVisibility(
+                    visible = true,
+                    enter = fadeIn(tween(260))
+                ) {
+                    Column(
+                        modifier = Modifier.fillMaxWidth(),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        Image(
+                            painter = companyLogo,
+                            contentDescription = "Razeen Secure Solution logo",
+                            modifier = Modifier.size(46.dp)
+                        )
+                        Text(
+                            text = RssBrand.COMPANY_NAME,
+                            modifier = Modifier.padding(top = 4.dp)
+                        )
+                    }
+                }
+            }
         }
     }
 }
