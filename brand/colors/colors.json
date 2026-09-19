@@ -1,0 +1,14 @@
+{
+  "brand": {
+    "name": "RSS",
+    "primary": "#C9A227",
+    "black": "#000000",
+    "white": "#FFFFFF"
+  },
+  "theme": {
+    "lightBackground": "#F7F7F7",
+    "lightSurface": "#FFFFFF",
+    "darkBackground": "#0B0B0D",
+    "darkSurface": "#151518"
+  }
+}
