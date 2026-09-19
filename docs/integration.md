@@ -36,3 +36,10 @@ The application repository remains the source of truth for project-specific code
 ## Future distribution
 
 A later phase can publish the library to a private Maven/GitHub Packages registry. Until then, source-module integration is the most transparent approach for the private RSS ecosystem.
+
+
+## Slide menu usage
+
+`RssSlideMenu` accepts an optional `Painter` for the approved RSS logo. The consuming project supplies the original logo asset; the common library does not generate or alter the logo.
+
+The menu callback is wired through each `RssMenuItem.onClick` action. Project repositories remain responsible for navigation destinations and project-specific menu entries.
