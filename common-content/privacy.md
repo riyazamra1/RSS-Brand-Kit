@@ -3,3 +3,5 @@
 This is the common RSS privacy-policy foundation.
 
 Each production application must extend this document with its actual project-specific data collection, storage, permissions, third-party services, authentication, backups, analytics, and deletion practices before release.
+
+Privacy pages should use the project's own app identity and the RSS company branding only in the designated company-branding area.
