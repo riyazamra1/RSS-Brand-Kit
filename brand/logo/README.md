@@ -7,18 +7,23 @@ The RSS Brand Kit contains three approved original logo assets.
 
 Use for:
 - App icons and compact brand placements
-- Android splash/registration areas where the symbol alone is appropriate
-- Menu branding where space is limited
+- Registration/menu areas where the symbol alone is appropriate
 - General RSS symbol use
 
 ## 2. Main Logo — Logo With Name
 **File:** `RSS Logo with Name Transparent.png`
 
-Use as the primary/full RSS company logo for:
+This is the **primary RSS company logo**.
+
+Use for:
+- **Android splash screens**
 - Company branding
 - Settings/about/company pages
 - Documents, websites, presentations and marketing
 - Places where the full company identity should be shown
+
+### Splash-screen rule
+Use **Main Logo — Logo With Name** on RSS app splash screens. Display it proportionally at an appropriate size with sufficient clear space. **Never oversize, zoom, stretch, crop, or distort the logo.**
 
 ## 3. Favicon
 **File:** `RSS Logo Favicon.png`
