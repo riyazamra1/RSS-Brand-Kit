@@ -1,0 +1,8 @@
+{
+  "fontFamily": "system",
+  "principles": [
+    "Use a clean modern Android system typeface by default.",
+    "Use clear hierarchy and readable sizes.",
+    "Avoid decorative fonts for functional UI."
+  ]
+}
