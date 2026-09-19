@@ -37,6 +37,10 @@ RSS applications continue to use their own package IDs, following the RSS conven
 
 `com.riyaz.<appname>`
 
+## Current library status
+
+The shared Android library currently provides the RSS theme foundation, reusable setting rows, company information pages, and a modern slide-menu foundation with optional project-supplied RSS logo rendering.
+
 ## Versioning
 
 The Brand Kit and Android library use semantic versioning:
