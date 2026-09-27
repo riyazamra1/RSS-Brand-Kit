@@ -68,8 +68,19 @@ Where applicable provide consistent patterns for Appearance, Notifications, Acco
 - Prefer Cloudflare Workers for deployment/automation when GitHub Actions limits or billing constraints prevent reliable execution.
 - Do not claim a build, deployment, test, or verification succeeded unless it has actually been verified.
 
+## Repository Implementation Requirement
+- RSS KIT rules are not considered implemented merely because they exist in this master repository or in a conversation.
+- When an RSS KIT rule affects a project, the project's actual source code/configuration must be updated in that project's own repository.
+- Completed implementation changes must be committed to the project's own repository.
+- Conversation-only code or instructions do not count as a completed project change.
+- After implementation, build/test/deployment verification must be performed when applicable.
+- Status must distinguish clearly between: rule defined in RSS KIT, implementation committed to the project repository, and implementation verified.
+- Do not claim a project is RSS KIT-compliant unless its repository implementation has actually been checked.
+
 ## Global Rule Updates
 When a new requirement is explicitly declared as a global RSS requirement, add or update it in this master file. Future RSS project work must follow the latest version of these rules without requiring separate manual requirement files for every project.
+
+When an existing global rule changes, affected project repositories must be updated as actual code/configuration work; updating this master file alone is not sufficient.
 
 ## Project Overrides
 A project may override a global rule only when the user explicitly requires a project-specific behavior. The override must not be treated as a new global default unless the user explicitly says so.
