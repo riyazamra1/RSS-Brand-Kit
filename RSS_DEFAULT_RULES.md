@@ -1,0 +1,79 @@
+# RSS Default Rules
+
+## Purpose
+This file is the authoritative master rule set for all RSS projects. RSS projects inherit these global defaults unless a project-specific requirement explicitly overrides a rule.
+
+## Rule Priority
+1. RSS Default Rules (global)
+2. Project-specific requirements
+3. Latest explicit user instruction
+
+A project-specific override applies only to that project.
+
+## RSS KIT UI/UX
+- Modern, professional, lightweight, practical UI.
+- Use the project's own original app logo for Splash, Registration, Welcome, App Features, and main app branding.
+- Never use the RSS company logo as the app logo.
+- Preserve the original Razeen Secure Solution/RSS company logo exactly: no recoloring, stretching, distortion, redesign, or replacement.
+- Use the RSS company logo only in designated company-branding areas such as the slide-menu footer and Settings/About/Contact/Privacy/Terms footer.
+- Support Light / Dark / System appearance.
+- Dark mode must avoid excessive glassmorphism; use subtle surfaces, borders, elevation, and readable contrast.
+- Use meaningful colorful icons where appropriate.
+- Use restrained animation and micro-interactions throughout the app.
+- Keep layouts responsive, accessible, performant, and easy to use.
+- Standard app flow: Splash → Registration/Create Account → Welcome → App Features → Main App.
+
+## Registration and Account
+- Registration requires Full Name and Email where applicable.
+- Support Google/Gmail sign-in and email registration.
+- Automatically detect the device email; if multiple accounts exist, allow selection.
+- Terms acceptance is mandatory.
+- The Create Account action must remain disabled until Terms are accepted.
+- Both email registration and Google/Gmail registration must follow the RSS Core account and verification rules.
+- A verification email must be sent as required.
+- The user may enter the app while email verification is pending.
+- Show an Email Verification Pending banner with live 24-hour countdown and Verify/Check Status/Resend actions until verified or expired.
+- RSS Core controls verification and expiration.
+- After successful verification, send a Welcome email from RSS Family.
+- For an already registered user who signs in/returns, send a Welcome Back email instead of a new-registration Welcome email.
+- Account state must support cloud and multi-device synchronization.
+
+## Lock Screen
+- Applicable RSS apps use a full-screen app-branded lock screen.
+- Use the app's original logo, not the RSS company logo.
+- Include clock/date, PIN indicator/keypad, biometric authentication, Forgot PIN/recovery, failed-attempt/temporary-lockout states, and configurable re-lock timeout where applicable.
+- Biometric authentication should use an icon-only action, not a text button saying “Use Biometrics.”
+- Support Light / Dark / System.
+- Keep the design subtle and avoid excessive glassmorphism.
+
+## Navigation
+- Use a modern slide/drawer navigation pattern where applicable.
+- Large app logo at the top.
+- Clear sections and meaningful icons.
+- Drawer closes automatically after navigation.
+- RSS company information and app version appear in the designated bottom/footer area.
+
+## Settings and Common Pages
+Where applicable provide consistent patterns for Appearance, Notifications, Account, Cloud Sync, Premium, Backup/Restore, Privacy Policy, Terms & Conditions, About, and Contact.
+
+## Premium and RSS Core
+- Premium apps must provide a real Upgrade to Premium entry connected to the RSS Core entitlement/payment flow.
+- Premium entitlement must be reflected after purchase, login, reinstall, or device change when the same RSS account is used.
+- Use the configured RSS Core payment adapter; Payments.lk is the target adapter unless explicitly changed.
+- Do not use Play Billing initially unless explicitly required.
+- RSS Core and RAY are part of the RSS KIT baseline.
+
+## Infrastructure
+- Standard architecture: RSS app → RSS Core → RAY → project/cloud services.
+- Prefer Cloudflare Workers for deployment/automation when GitHub Actions limits or billing constraints prevent reliable execution.
+- Do not claim a build, deployment, test, or verification succeeded unless it has actually been verified.
+
+## Global Rule Updates
+When a new requirement is explicitly declared as a global RSS requirement, add or update it in this master file. Future RSS project work must follow the latest version of these rules without requiring separate manual requirement files for every project.
+
+## Project Overrides
+A project may override a global rule only when the user explicitly requires a project-specific behavior. The override must not be treated as a new global default unless the user explicitly says so.
+
+## Source of Truth
+Repository: riyazamra1/RSS-Brand-Kit
+Master rules file: RSS_DEFAULT_RULES.md
