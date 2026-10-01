@@ -21,7 +21,7 @@ A project-specific override applies only to that project.
 - Use meaningful colorful icons where appropriate, except where a selected neutral theme explicitly requires neutral treatment.
 - Use restrained animation and micro-interactions throughout the app.
 - Keep layouts responsive, accessible, performant, and easy to use.
-- Standard app flow: Splash → Registration/Create Account → Welcome → App Features → Main App.
+- Standard app flow for all RSS projects: Splash Screen → App Features Animation Flow → Create Account / Login → Welcome Screen → Dashboard.
 
 ## Centralized RSS Theme Standard
 
