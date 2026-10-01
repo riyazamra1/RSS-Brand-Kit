@@ -16,12 +16,53 @@ A project-specific override applies only to that project.
 - Never use the RSS company logo as the app logo.
 - Preserve the original Razeen Secure Solution/RSS company logo exactly: no recoloring, stretching, distortion, redesign, or replacement.
 - Use the RSS company logo only in designated company-branding areas such as the slide-menu footer and Settings/About/Contact/Privacy/Terms footer.
-- Support Light / Dark / System appearance.
+- Support the centralized RSS theme catalog defined below.
 - Dark mode must avoid excessive glassmorphism; use subtle surfaces, borders, elevation, and readable contrast.
-- Use meaningful colorful icons where appropriate.
+- Use meaningful colorful icons where appropriate, except where a selected neutral theme explicitly requires neutral treatment.
 - Use restrained animation and micro-interactions throughout the app.
 - Keep layouts responsive, accessible, performant, and easy to use.
 - Standard app flow: Splash → Registration/Create Account → Welcome → App Features → Main App.
+
+## Centralized RSS Theme Standard
+
+All RSS projects use the centralized RSS theme catalog and behavior supplied by RSS Core.
+
+### Theme catalog
+- Material
+- White
+- Onyx
+- Light
+- Dark
+- Black
+- Auto — White + Onyx
+- Auto — Light + Dark
+- Auto — Light + Black
+- System Default
+- OLED Black
+- Warm Light
+- Cool Light
+- High Contrast
+- Dynamic Color
+
+### Auto — White + Onyx
+- Light state uses White surfaces with dark neutral text.
+- Dark state uses Onyx surfaces with light neutral text.
+- Onyx is a neutral black/charcoal palette.
+- **Gold is not part of this theme.**
+- Do not add gold buttons, gold highlights, gold backgrounds, gold icons, or gold decorative accents to White + Onyx.
+- Auto mode follows the device/system light-dark state.
+- Theme changes apply consistently to the app's supported surfaces, including navigation, settings, dialogs, cards, onboarding, and other RSS KIT surfaces.
+
+### Branding separation
+- Each app keeps its own original project logo for app-specific UI.
+- The original Razeen Secure Solution company logo remains unchanged.
+- Theme colors must never recolor, stretch, distort, or redraw the RSS company logo.
+- RSS company branding remains limited to designated company-branding areas.
+
+### Centralization
+- RSS Core is the central source for the shared theme catalog/configuration.
+- RSS projects consume the shared catalog while retaining their own project-specific UI and branding.
+- A user's selected theme should persist with the RSS account where the project supports account synchronization, and should remain available after supported reinstall/device-change flows.
 
 ## Registration and Account
 - Registration requires Full Name and Email where applicable.
@@ -43,7 +84,7 @@ A project-specific override applies only to that project.
 - Use the app's original logo, not the RSS company logo.
 - Include clock/date, PIN indicator/keypad, biometric authentication, Forgot PIN/recovery, failed-attempt/temporary-lockout states, and configurable re-lock timeout where applicable.
 - Biometric authentication should use an icon-only action, not a text button saying “Use Biometrics.”
-- Support Light / Dark / System.
+- Support the centralized theme catalog.
 - Keep the design subtle and avoid excessive glassmorphism.
 
 ## Navigation
@@ -52,9 +93,13 @@ A project-specific override applies only to that project.
 - Clear sections and meaningful icons.
 - Drawer closes automatically after navigation.
 - RSS company information and app version appear in the designated bottom/footer area.
+- The drawer follows the selected centralized theme.
 
 ## Settings and Common Pages
 Where applicable provide consistent patterns for Appearance, Notifications, Account, Cloud Sync, Premium, Backup/Restore, Privacy Policy, Terms & Conditions, About, and Contact.
+- Appearance exposes the centralized RSS theme catalog.
+- Theme selection must include Auto — White + Onyx.
+- Auto — White + Onyx must remain neutral; it must not inherit the RSS gold brand accent.
 
 ## Premium and RSS Core
 - Premium apps must provide a real Upgrade to Premium entry connected to the RSS Core entitlement/payment flow.
