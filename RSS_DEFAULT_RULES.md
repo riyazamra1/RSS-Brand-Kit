@@ -122,6 +122,19 @@ Where applicable provide consistent patterns for Appearance, Notifications, Acco
 - Status must distinguish clearly between: rule defined in RSS KIT, implementation committed to the project repository, and implementation verified.
 - Do not claim a project is RSS KIT-compliant unless its repository implementation has actually been checked.
 
+## Change Authorization and Deployment Gate
+
+For every new or changed requirement requested for any RSS project:
+1. Inspect the relevant project repositories and identify all relevant problems, dependencies, affected files/components, and risks before making code changes.
+2. Provide the user with a concise summary of what was found and what is planned.
+3. Wait for explicit user confirmation: **“Go ahead”** or **“Confirm”**.
+4. Do not modify, create, delete, or commit project code/configuration before that confirmation.
+5. After confirmation, implement the approved changes only in the affected project's own repository/repositories and verify them where applicable.
+6. Do **not** deploy automatically after code changes.
+7. After implementation, report the commit SHA(s) and a concise change summary, then wait for separate deployment approval.
+8. Deployment requires a separate explicit user approval after the code-change report; “Go ahead”/“Confirm” given before the implementation phase does not constitute deployment approval.
+9. Never claim code, commit, build, verification, or deployment success unless it was actually performed and verified.
+
 ## Global Rule Updates
 When a new requirement is explicitly declared as a global RSS requirement, add or update it in this master file. Future RSS project work must follow the latest version of these rules without requiring separate manual requirement files for every project.
 
