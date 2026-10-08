@@ -147,6 +147,18 @@ A project may override a global rule only when the user explicitly requires a pr
 Repository: riyazamra1/RSS-Brand-Kit
 Master rules file: RSS_DEFAULT_RULES.md
 
+## Mandatory Per-Commit Status Record and Single-Commit Policy
+
+- For every commit, show a status record in the current conversation and future relevant project updates; do not wait for the user to ask.
+- Each record must identify the repository, branch, full or short commit SHA, commit message, commit-provider result, build status, each relevant deployment-provider status, release/build/Worker ID when available, direct status links, and live-verification result.
+- Check each relevant provider independently when its records are accessible, including GitHub, GitLab, Bitbucket, Cloudflare, Codemagic, and other providers actually used by the project. Mark inaccessible or unchecked provider status **Not Verified**; never infer it from another provider's result.
+- Use only evidence-backed statuses: **Success**, **Failed**, **Running**, **Queued**, or **Not Verified** (and report cancellation only when the provider confirms it).
+- A successful commit is not proof of a successful build, deployment, or live production check. Keep these states separate and link to the evidence.
+- Do not create a commit without the user's explicit approval. For one approved task, consolidate all related changes into **one commit**; do not split related changes into multiple commits unless the user explicitly asks.
+- Preserve deployment order across providers: let any older running deployment finish; keep newer deployments queued; then start the next queued deployment. Never cancel an older running deployment to prioritize newer work.
+- Never restore an old version as a shortcut for fixing a new version. Diagnose and repair the current intended version unless the user explicitly authorizes a rollback.
+- These rules apply globally to all RSS projects and deployment providers. When a provider's status cannot be checked in the current conversation, explicitly show **Not Verified** rather than omit it or guess.
+
 ## Commit and Deployment Reporting Standard
 
 This is a global RSS KIT rule for RSS Core, RSS Brand Kit, and every RSS project and deployment provider.
