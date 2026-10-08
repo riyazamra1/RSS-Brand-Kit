@@ -146,3 +146,27 @@ A project may override a global rule only when the user explicitly requires a pr
 ## Source of Truth
 Repository: riyazamra1/RSS-Brand-Kit
 Master rules file: RSS_DEFAULT_RULES.md
+
+## Commit and Deployment Reporting Standard
+
+This is a global RSS KIT rule for RSS Core, RSS Brand Kit, and every RSS project and deployment provider.
+
+- Report each commit and its associated build/deployment result in a clear, consistent, easy-to-check format.
+- When Cloudflare Workers Builds is the deployment provider, use this format whenever the data is available:
+
+  **Cloudflare Workers Build**  
+  Commit `<short SHA>` · <build status>  
+  **Deployed Worker version**  
+  `<Worker version ID>`  
+  **View Cloudflare deployment**: <direct build-details URL>
+
+- Include the commit's short SHA and commit message when useful; report the actual status exactly (for example, queued, running, completed successfully, failed, or cancelled).
+- Include the deployed Worker version ID only when the provider reports one. Include a direct link to the specific build/deployment when available.
+- Apply the same principle to other providers: identify the provider, commit, actual build/deployment status, deployed version or release identifier when available, and a direct run/deployment link when available.
+- For multiple commits, report every relevant commit separately and associate each with its correct build/deployment. Do not imply that one successful build proves every commit was deployed.
+- Distinguish **commit created**, **build succeeded**, **deployment succeeded**, and **live production verified** as separate states. Never imply one state proves another.
+- Report live endpoint or application verification only after actually testing it. If live verification is unavailable or fails, state that clearly.
+- If a deployment is queued or still running, report that state and follow the global deployment queue rule: let the running deployment finish, keep new deployments queued, and start the next queued deployment afterward. Do not cancel an older running deployment just because a newer commit exists.
+- Do not invent build IDs, version IDs, URLs, test results, or success claims. If a field is unavailable, omit it or mark it as not provided.
+- Use this reporting standard in status updates, completion reports, and deployment summaries across RSS projects.
+
